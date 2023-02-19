@@ -1,0 +1,144 @@
+:root {
+    --main-width: 800px;
+    --main-color: red;
+    --main-color-hover: #951717;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif!important;
+    background-color: #f1f1f1!important;
+}
+
+/* index */
+.div-carousel div {
+    width: var(--main-width)!important;
+}
+.div-carousel h1 {
+    position: absolute;
+    margin-top: 80px;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.servico {
+    padding: 20px; 
+    background: white; 
+    box-shadow: 0px 0px 4px gray; 
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.servico:hover {
+    background: var(--main-color)!important;
+    color: white!important;
+    translate: 0 -15px;
+}
+
+.destaque h4 {
+    font-size: 28px;
+    font-weight: 700;
+}
+.destaque .descricao {
+    color: #616161;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.trabalhamos li {
+    font-size: 18px;
+    font-weight: 500;
+}
+.trabalhamos button {
+    border: none;
+    padding: 10px 20px;
+    background: var(--main-color);
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.trabalhamos button:hover {
+    background-color: var(--main-color-hover);
+}
+
+/* Serviços */
+.servicos {
+    width: 80%;
+    padding: 10px 20px;
+    background: white;
+    box-shadow: 0 1px 2px grey;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.servicos:hover {  background: #f1f1f1; }
+
+.titulo {
+    font-size: 45px; 
+    font-weight: 900; margin-bottom: 20px;
+}
+
+.conteudo {
+    font-size: 18px; 
+    font-weight: 600; color: grey;
+    text-align: justify;
+}
+
+.extra {
+    height: 300px; 
+    border: solid 4px var(--main-color); 
+    padding: 30px;
+}
+.extra h3 {
+    font-size: 40px; 
+    font-weight: 800;
+}
+.extra button {
+    width: 160px; 
+    height: 65px; 
+    border: solid 1px; 
+    background: transparent;
+    transition: 0.3s;
+}
+.extra button:hover {
+    background: var(--main-color-hover);
+    color: white;
+}
+
+.destaque ul { list-style: none; padding: 0; margin: 0; }
+.destaque li{ font-size: 19px; font-weight: 600; margin-bottom: 40px; }
+
+/* Reescrever */
+.slick-dots li {
+    margin-bottom: 40px!important;
+}
+
+/* Cases */
+.images {
+    transition: 0.3s;
+    cursor: pointer;
+}
+.images:hover {
+    transform: translateY(-10px);
+}
+
+/* Orçamento */
+.formOrcamento input, .formOrcamento textarea {
+    padding: 5px 20px;
+    margin-bottom: 5px;
+    outline: none;
+}
+.formOrcamento button {
+    border: none;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: var(--main-color);
+    color: white;
+    transition: 0.3s;
+}
+.formOrcamento button:hover {
+    background-color: var(--main-color-hover);
+}
+.formOrcamento h6 {
+    font-size: 18px;
+}
