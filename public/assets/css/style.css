@@ -1,5 +1,5 @@
 :root {
-    --main-width: 800px;
+    --main-width: 1200px;
     --main-color: red;
     --main-color-hover: #951717;
 }
@@ -113,12 +113,24 @@ body {
 }
 
 /* Cases */
-.images {
-    transition: 0.3s;
+.case {
     cursor: pointer;
 }
-.images:hover {
-    transform: translateY(-10px);
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    transition: 0.3s;
+}
+.case:hover .overlay {
+    opacity: 0.7;
+    
 }
 
 /* Orçamento */

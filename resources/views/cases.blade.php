@@ -11,14 +11,12 @@
             <h1 style="font-size: 45px; font-weight: 700; margin-bottom: 20px;">Cases</h1>
         </div>
         @if(!isset($case))
-            <div class="d-flex flex-wrap col-12 justify-content-center">
+            <div class="d-flex flex-wrap col-12 justify-content-center" style="width: var(--main-width);">
                 @for($i = 0; $i < 12; $i++) 
-                    <a href="/cases/{{ $i }}">
-                        <div class="case">
-                            <img class="w-100" src="uploads/cases/teste.jpg">
-                            <div class="overlay">teste</div>
-                        </div>
-                    </a>
+                    <div class="case col-3" style="position: relative;">
+                        <div class="w-100"><img class="w-100" src="uploads/cases/teste.jpg"></div>
+                        <div class="overlay d-flex justify-content-center align-items-center">teste</div>
+                    </div>
                 @endfor
             </div>
         @else

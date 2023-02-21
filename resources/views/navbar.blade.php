@@ -10,7 +10,7 @@
             <a href="/{{ $topico->pagina }}" style="cursor: pointer; color: black; text-decoration: none;">Serviços</a>
         @endforeach
         </div>  
-        <div class="col-4"><buttson class="orcamento" style="float: right; width: 200px; height: 80px; border: none; background: red; color: white; font-size: 18px; font-weight: 700;">Orçamento</button></div>
+        <div class="col-4"><button class="orcamento" style="float: right; width: 200px; height: 80px; border: none; background: red; color: white; font-size: 18px; font-weight: 700;">Orçamento</button></div>
     </div>
 </section>
 
