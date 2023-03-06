@@ -22,7 +22,16 @@
         @else
             <div class="d-flex justify-content-between" style="width: 1200px;">
                 <div class="col-9 d-flex flex-wrap">
-                    @for($i = 0; $i < count($case->imagens); $i++)
+                    <?php 
+                    $imagens = $case->imagens; 
+                    $detalhes = $case->detalhes;
+
+                    if($imagens != "") $imagens = (object) json_decode($imagens);
+                    if($detalhes != "") $detalhes = (object) json_decode($case->detalhes);
+                    
+                    $count = 0;
+                    ?>
+                    @for($i = 0; $i < $count; $i++)
                         <div class="col-6 images"><img class="w-100" id="image{{ $i }}" src="/uploads/cases/teste/{{ $case->imagens[$i] }}" style="padding: 0 20px 20px 0;"></div>
                     @endfor
                 </div>
@@ -36,15 +45,15 @@
                         <div>
                             <div class="d-flex">
                                 <h6 class="me-3">Projeto: </h6> 
-                                <div style="font-weight: 600; color: grey;">{{ $case->detalhes->projeto }}</div>
+                                <div style="font-weight: 600; color: grey;">{{$detalhes->projetos}}</div>
                             </div>
                             <div class="d-flex">
                                 <h6 class="me-3">Categorias: </h6> 
-                                <div style="font-weight: 600; color: grey;">{{ $case->detalhes->categoria }}</div>
+                                <div style="font-weight: 600; color: grey;">{{$detalhes->categorias}}</div>
                             </div>
                             <div class="d-flex">
                                 <h6 class="me-3">Cliente: </h6> 
-                                <div style="font-weight: 600; color: grey;">{{ $case->detalhes->cliente }}</div>
+                                <div style="font-weight: 600; color: grey;">{{$detalhes->cliente}}</div>
                             </div>
                         </div>
                     </div>

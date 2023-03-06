@@ -9,9 +9,6 @@ use Illuminate\Support\Facades\DB;
 class AdminController extends Controller
 {
     public function index() {
-        $orcamentos = DB::table('orcamentos')->get();
-        return view('admin.index', [
-            'orcamentos' => $orcamentos
-        ]);
+        return view('admin.index');
     }
 }

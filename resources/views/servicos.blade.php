@@ -15,10 +15,7 @@
                 <div class="col-8">
                     <h1 class="titulo">{{ $servico->titulo }}</h1>
                     <p class="conteudo">{{ $servico->conteudo }}</p>
-                    @if($servico->imagens != "")
-                        <br>
-                        <div></div>
-                    @endif
+                    @if($servico->imagem != "") <div><img class="img-fluid w-100" src="/uploads/servicos/{{$servico->imagem}}" alt="Banner"></div> @endif
                 </div>
             </div>
             <div class="d-flex mt-5 col-8">

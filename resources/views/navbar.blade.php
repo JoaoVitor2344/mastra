@@ -7,7 +7,7 @@
         $topicos = DB::table('topicos')->where('status', 1)->get();
         @endphp
         @foreach($topicos as $topico)
-            <a href="/{{ $topico->pagina }}" style="cursor: pointer; color: black; text-decoration: none;">Serviços</a>
+            <a href="/{{ $topico->pagina }}" style="cursor: pointer; color: black; text-decoration: none;">{{$topico->nome}}</a>
         @endforeach
         </div>  
         <div class="col-4"><button class="orcamento" style="float: right; width: 200px; height: 80px; border: none; background: red; color: white; font-size: 18px; font-weight: 700;">Orçamento</button></div>

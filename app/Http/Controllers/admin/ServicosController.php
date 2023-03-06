@@ -11,11 +11,11 @@ use Illuminate\Support\Facades\Validator;
 class ServicosController extends Controller
 {
     public function index($method = null, $servico = null) {
-        $servicos = DB::table('servicos')->get();
+        $servicos = DB::table('servicos')->join('categorias', 'categorias.id', '=', 'servicos.categoria')->get();
         $categorias = DB::table('categorias')->get();
 
         if($servico != null) $servico = DB::table('servicos')->where('id', $servico)->first();
-
+        
         return view('admin.servicos', [
             'servicos' => $servicos,
             'categorias' => $categorias,
