@@ -169,10 +169,7 @@
                                     };
                                     reader.readAsDataURL(file);
                                 });
-                            </script>
 
-                            
-                            <script>
                                 $(document).ready(function() {
                                     $('#summernote').summernote();
                                 });
